@@ -1,0 +1,13 @@
+name: PR Alert for MS Teams
+on:
+  pull_request_target:
+    types:
+      - opened
+
+jobs:
+  pr-alert:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Send PR Alert to MS Teams
+        run: |
+          node src/test.js          

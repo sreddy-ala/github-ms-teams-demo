@@ -8,6 +8,8 @@ jobs:
   pr-alert:
     runs-on: ubuntu-latest
     steps:
-      - name: print payload
-        run: |
-          echo ${{ github.event.pull_request }}
+      - name: Execute JavaScript inline 
+        uses: satackey/action-js-inline@v0.0.2
+        script: |
+         console.log(JSON.stringify(${{github.event.pull_request}}))
+          

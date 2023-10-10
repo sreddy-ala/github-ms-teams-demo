@@ -10,6 +10,7 @@ jobs:
     steps:
       - name: Execute JavaScript inline 
         uses: satackey/action-js-inline@v0.0.2
-        script: |
-         console.log(JSON.stringify(${{github.event.pull_request}}))
+        with:          
+          script:
+           console.log(JSON.stringify(${{github.event.pull_request}}))
           

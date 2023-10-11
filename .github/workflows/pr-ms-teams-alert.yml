@@ -6,10 +6,11 @@ on:
 
 jobs:
   pr-alert:
-    runs-on: ubuntu-latest    
+    runs-on: ubuntu-latest   
+    if: github.event.pull_request.base.ref == 'main'
     steps:
       - name: Hello world
-        run: echo Hello world from $GITHUB_BASE_REF!
+        run: echo Hello world from ${{github.event.pull_request.base.ref}}!
       - name: GitHub Script
         uses: actions/github-script@v2.1.0
         with:

@@ -1,6 +1,6 @@
 name: PR Alert for MS Teams
 on:
-  pull_request_target:
+  pull_request:
     types:
       - submitted
     branches:

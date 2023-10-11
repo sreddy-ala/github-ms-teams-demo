@@ -2,7 +2,9 @@ name: PR Alert for MS Teams
 on:
   pull_request_target:
     types:
-      - opened
+      - submitted
+    branches:
+      - 'main'
 
 jobs:
   pr-alert:

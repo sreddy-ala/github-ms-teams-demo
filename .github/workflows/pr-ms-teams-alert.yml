@@ -6,9 +6,10 @@ on:
 
 jobs:
   pr-alert:
-    runs-on: ubuntu-latest
-    if: github.base_ref == 'main'
+    runs-on: ubuntu-latest    
     steps:
+      - name: Hello world
+        run: echo Hello world from $GITHUB_BASE_REF!
       - name: GitHub Script
         uses: actions/github-script@v2.1.0
         with:

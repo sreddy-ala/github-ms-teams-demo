@@ -7,7 +7,7 @@ on:
 jobs:
   pr-alert:
     runs-on: ubuntu-latest
-    if: github.base_ref == 'main' && github.event.review.state == 'approved'
+    if: ${{ github.base_ref == 'main' && github.event.review.state == 'approved' }}
     steps:
       - name: GitHub Script
         uses: actions/github-script@v2.1.0
